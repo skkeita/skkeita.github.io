@@ -1,0 +1,283 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* BODY */
+body {
+  background-color: black;
+  color: white;
+  overflow-x: hidden;
+}
+
+/* HEADER */
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 9%;
+  z-index: 100;
+  transition: transform 0.3s ease-in-out;
+}
+
+header.hide-header {
+  transform: translateY(-100%);
+  transition: transform 0.3s ease-in-out;
+}
+
+.logo {
+  font-size: 2.5rem;
+  color: #6E56CF;
+  font-weight: bold;
+
+}
+
+/* NAVIGATION */
+nav a {
+  font-size: 1.5rem;
+  margin-left: 2rem;
+  color: white;
+  transition: 0.3s;
+}
+
+nav a:hover,
+nav a.active {
+  color: #6E56CF;
+  border-bottom: 2px solid #6E56CF;
+}
+
+/* HAMBURGER MENU */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background-color: #6E56CF;
+  border-radius: 2px;
+}
+
+/* SECTION */
+section {
+  padding: 6rem 9% 4rem;
+}
+
+/* HOME SECTION */
+.home {
+  margin-top: 10rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+}
+
+.home-img img {
+  width: 300px;
+  border-radius: 50%;
+  box-shadow: 0 0 25px #6E56CF;
+}
+
+.home-content {
+  max-width: 600px;
+}
+
+.home-content h1 {
+  font-size: 3rem;
+}
+
+.typing-text {
+  font-size: 2rem;
+  color: #6E56CF;
+  border-right: 2px solid #6E56CF;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 0;
+  animation: typing 3s steps(40, end) forwards, blink 0.8s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
+.home-content p {
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  line-height: 1.6;
+}
+
+/* SOCIAL ICONS */
+.social-icons a {
+  color: #6E56CF;
+  font-size: 1.5rem;
+  border: 2px solid #6E56CF;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+}
+
+.social-icons a:hover {
+  background: #6E56CF;
+  color: black;
+  transform: scale(1.2);
+}
+
+/* BUTTON */
+.btn {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 0.8rem 2rem;
+  font-size: 1rem;
+  color: #6E56CF;
+  border: 2px solid #6E56CF;
+  border-radius: 2rem;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #6E56CF;
+  color: black;
+  transform: scale(1.05);
+}
+
+/* SECTION TITLES */
+.section-title {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #6E56CF;
+}
+
+/* SKILLS */
+.skills-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.skill-block {
+  background-color: #1a1a1a;
+  border-left: 5px solid #6E56CF;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  animation: fadeInUp 0.8s ease-out forwards;
+  
+}
+.skill-block:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 20px #6E56CF;
+}
+
+.skill-block h2 {
+  margin-bottom: 1rem;
+  color: #6E56CF;
+  font-size: 1.5rem;
+}
+
+.skill-block ul {
+  list-style: none;
+}
+
+.skill-block li {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.skill-block li i {
+  margin-right: 0.5rem;
+  color: #f1c3f3;
+}
+
+/* ANIMATION */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 995px) {
+  .hamburger {
+    display: flex;
+  }
+
+  nav.nav-links {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 60px;
+    right: 0;
+    background: #6E56CF;
+    width: 60%;
+    height: 100vh;
+    padding: 2rem;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  nav.nav-links.active {
+    transform: translateX(0);
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-wrap: nowrap;
+    padding: 1rem 3%;
+  }
+
+  .home {
+    flex-direction: column;
+    text-align: center;
+    padding-top: 10;
+  }
+
+  .home-img img {
+    width: 70vw;
+  }
+
+  .home-content h1 {
+    font-size: 2rem;
+    text-align: left;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  .skill-block h2 {
+    font-size: 1.2rem;
+  }
+
+  .skill-block li {
+    font-size: 1rem;
+  }
+}

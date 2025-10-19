@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Skyler - Contact</title>
+    <link rel="stylesheet" href="Contact.css" />
+  </head>
+  <body>
+    <header>
+      <h1 href="#" class="logo">Skyler</h1>
+      <nav class="nav-links">
+        <a href="Acceuil.html">Accueil</a>
+        <a href="Experience.html">Expérience</a>
+        <a href="Contact.html" class="active">Contact</a>
+      </nav>
+    </header>
+
+    <section class="contact-section">
+      <h1>Contactez <span>Moi</span></h1>
+      <form class="contact-form" id="contactForm">
+        <input type="text" name="name" placeholder="Votre nom" required />
+        <input type="email" name="email" placeholder="Votre email" required />
+        <textarea
+          name="message"
+          rows="5"
+          placeholder="Votre message"
+          required
+        ></textarea>
+        <button type="submit">Envoyer</button>
+        <p class="form-message" id="formMessage"></p>
+      </form>
+    </section>
+
+    <script src="Contact.js"></script>
+  </body>
+</html>

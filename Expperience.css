@@ -1,0 +1,108 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: black;
+  color: white;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 10%;
+  background-color: black;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #6E56CF;
+}
+.download-btn {
+  background-color: #7B2CBF;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.download-btn:hover {
+  background-color: #9D4EDD; /* Violet plus clair au survol */
+}
+
+.nav-links a {
+  margin-left: 2rem;
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  border-bottom: 2px solid transparent;
+  transition: 0.3s;
+}
+
+.nav-links a:hover, .nav-links a.active {
+  border-bottom: 2px solid #6E56CF;
+  color: #6E56CF;
+}
+
+.experience-section {
+  padding: 6rem 10%;
+}
+
+.experience-section h1 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.experience-section h1 span {
+  color: #6E56CF;
+}
+
+.experience-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.experience-card {
+  background-color: #1a1a1a;
+  padding: 2rem;
+  border-radius: 1rem;
+  border-left: 4px solid #6E56CF;
+  transition: transform 0.3s;
+}
+
+.experience-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 15px #6E56CF;
+}
+
+.toggle-btn {
+  margin-top: 1rem;
+  padding: 0.5rem 1.2rem;
+  border: 2px solid #6E56CF;
+  background: transparent;
+  color: #6E56CF;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.toggle-btn:hover {
+  background-color: #6E56CF;
+  color: black;
+}
+
+.full-desc {
+  margin-top: 1rem;
+  font-size: 0.95rem;
+}
+
+.hidden {
+  display: none;
+}
